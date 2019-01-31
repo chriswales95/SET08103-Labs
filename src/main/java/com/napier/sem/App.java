@@ -19,14 +19,14 @@ public class App
 
         // Connection to the database
         Connection con = null;
-        int retries = 3;
+        int retries = 5;
         for (int i = 0; i < retries; i++)
         {
             System.out.println("Connecting to database...");
             try
             {
                 // Wait a bit for db to start
-                Thread.sleep(19000);
+                Thread.sleep(30000);
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
