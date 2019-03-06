@@ -242,7 +242,7 @@ public class App
         App a = new App();
 
         // Connect to database
-        a.connect("db");
+        a.connect("localhost:33060");
 
         // Extract employee salary information
         ArrayList<Employee> employees = a.getSalariesByTitle("Engineer");
