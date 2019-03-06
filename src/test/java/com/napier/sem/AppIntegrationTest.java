@@ -1,5 +1,8 @@
 package com.napier.sem;
 
+import com.napier.sem.App;
+import com.napier.sem.Employee;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -23,8 +26,8 @@ public class AppIntegrationTest
     void testGetEmployee()
     {
         Employee emp = app.getEmployee(255530);
-        assertEquals(emp.emp_no, 255530);
-        assertEquals(emp.first_name, "Ronghao");
-        assertEquals(emp.last_name, "Garigliano");
+        Assertions.assertEquals(emp.emp_no, 255530);
+        Assertions.assertEquals(emp.first_name, "Ronghao");
+        Assertions.assertEquals(emp.last_name, "Garigliano");
     }
 }
